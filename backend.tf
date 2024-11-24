@@ -3,5 +3,6 @@ terraform {
     bucket = "s3-bucket-terraform-backend"
     region = "us-east-1"
     dynamodb_table = "my-dynamodb-table"
+    key = "state/terraform.tfstate"
   }
 }
