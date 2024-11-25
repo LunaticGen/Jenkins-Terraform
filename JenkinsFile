@@ -5,6 +5,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 checkout scm
+                /* go to get pipeline syntax through the the configure job part and select the gitscm option, enter the URL of the code repo and also the branch. This will generate the syntax to add the checkout action from the step.*/
             }
         }
     
@@ -20,9 +21,9 @@ pipeline {
             }
         }
 
-        stage (" Action") {
+        stage ("Action") {
             steps {
-                echo "Terraform action is --> ${action}"
+                echo "Terraform action is --> ${action}" /* ${var_name should match with the }
                 sh ('terraform ${action} --auto-approve') 
            }
         }
